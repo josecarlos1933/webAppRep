@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+                                
+		<title>Sudoku implementation guide</title>
+                                <link rel="shortcut icon" href="sudokuicon.png" type="image/jpg" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="sudokuicon.png" alt="" /></span>
+							<h1 id="title">Sudoku    implementation</h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+							
+								Prologue's nav expects links in one of two formats:
+								
+								1. Hash link (scrolls to a different section within the page)
+								
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">welcome</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Rules</span></a></li>
+                                                                                                                                <li><a href="#sourceCode" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Source code and implementation</span></a></li>
+                                                                                                                                <li><a href="#play" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Play!</span></a></li>
+                                                                                                                                <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About me</span></a></li>
+
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Sudoku basic rules: </h2>
+                                                                
+							</header>
+							
+							<footer>
+								<a href="#portfolio" class="button scrolly">Continue</a>
+							</footer>
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Rules</h2>
+							</header>
+							
+							<p>· There is only one valid solution to each Sudoku puzzle. The only way the puzzle can be considered solved correctly is when all 81 boxes contain numbers and the other Sudoku rules have been followed.
+
+· When you start a game of Sudoku, some blocks will be pre-filled for you. You cannot change these numbers in the course of the game.
+
+· Each column must contain all of the numbers 1 through 9 and no two numbers in the same column of a Sudoku puzzle can be the same.
+
+· Each row must contain all of the numbers 1 through 9 and no two numbers in the same row of a Sudoku puzzle can be the same.
+
+· Each block must contain all of the numbers 1 through 9 and no two numbers in the same block of a Sudoku puzzle can be the same..</p>
+						
+					</section>
+					<section id="sourceCode" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Source code & implementation</h2>
+							</header>
+							
+							<p>
+                                                           I developed a Ruby on Rails basic application of the sudoku game using the following:<br>
+                                                           Fedora 21 x_64 OS<br>
+                                                           Ruby version 2.0.0 <br>
+                                                           gem 'rails', '4.2.1'<br>
+                                                           gem 'sass-rails', '~> 5.0' As CSS managers<br>
+                                                           gem 'uglifier', '>= 1.3.0' JS compressor<br>
+                                                           gem 'coffee-rails', '~> 4.1.0' coffee assets and views<br>
+                                                           gem 'jquery-rails' Jquery<br>
+                                                           gem 'turbolinks' to faster links<br>
+                                                           gem 'sudoku_maker' This gem provides an array that was used to generate Sudokus, and locating this array at the solution, the user can see the puzzle solved.<br>
+                                                           gem 'sqlite3' To manage DB locally, at hosted app I used Postgres because Herokuapp only supports Postgres DB.<br>
+                                                           gem 'spring' for keep the app running in background<br>
+                                                           gem 'pg' Postgres DB management<br>
+                                                           000webhost to host this page<br>
+                                                           Heroku to host the DB and the entire Ruby on rails Sudoku app.<br>
+                                                           This HTML5 Template that I made taken and adapted from one of my university courses<br>
+                                                           I shared the source code of a Sudoku game application made in Ruby on Rails languaje publicly in this Github repository:</p>
+                                                                                                                <a href="https://github.com/josecarlos1933/sudokuApp">Github repository</a>
+					</section>
+                                                                                <section id="play" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Play!</h2>
+							</header>
+							
+							<p>You can begin to play Sudoku by clicking this link</p>
+                                                                                                                <a href="https://fathomless-castle-4895.herokuapp.com/players">Go to play Sudoku</a>
+					</section>
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About me</h2>
+							</header>
+							
+							<p>José Carlos Zúñiga Fernández, I´m a Computer business advanced student, I consider that i´m an autodidact person, 
+                                                        i like programming and I like to write poetry and meteorology, that are my hobbies.</p>
+
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>All rights reserved.</li><li>Developed by José Carlos Zúñiga Fernández</li>
+					</ul>
+				
+			</div>
+
+	</body>
+</html>
